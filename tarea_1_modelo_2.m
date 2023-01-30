@@ -3,10 +3,10 @@
 function Reactor_en_serie_2
 clear
 clc
-[T,y]=ode45(@modelo_2,[0,80],[0,0]);
+[T,y]=ode45(@modelo_2,[0,80],[0.0,0]);
 y(:,2)
 %datos
-plot(T,y(:,2),"b")
+plot(T,0.5-y)
 title("Tarea no.1 modelo 2 Aguayo Johann")
 ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
