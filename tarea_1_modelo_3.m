@@ -1,9 +1,9 @@
 %Tarea 1 modelo 2 control de procesos
 %Reactores en serie con mismo volumen y flujo ctte
-function Reactor_en_serie_2
+function Reactor_en_serie_3
 clear
 clc
-[T,y]=ode45(@modelo_2,[0,80],[0,0,0]);
+[T,y]=ode45(@modelo_3,[0,80],[0,0,0]);
 y(:,3)
 %datos
 plot(T,y)
@@ -12,7 +12,7 @@ ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
 legend("Reactor 1","Reactor 2","Total")
 end
-function dydT=modelo_2(T,y)
+function dydT=modelo_3(T,y)
 %datos
 Ca1 = y(1);
 Ca2 = y(2);
