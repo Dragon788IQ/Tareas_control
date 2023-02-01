@@ -6,11 +6,11 @@ clc
 [T,y]=ode45(@modelo_2,[0,80],[0,0,0]);
 y(:,3)
 %datos
-plot(T,y(:,3),"r")
+plot(T,y)
 title("Tarea no.1 modelo 3 Aguayo Johann")
 ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
-legend("CA_total")
+legend("Reactor 1","Reactor 2","Total")
 end
 function dydT=modelo_2(T,y)
 %datos
