@@ -4,7 +4,7 @@ function Reactor_en_serie_2
 clear
 clc
 [T,y]=ode45(@modelo_2,[0,80],[0,0,0,0]);
-y(:,2)
+y
 %datos
 plot(T,y)
 title("Tarea no.1 modelo 2 Aguayo Johann")

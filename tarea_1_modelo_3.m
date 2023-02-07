@@ -4,13 +4,13 @@ function Reactor_en_serie_3
 clear
 clc
 [T,y]=ode45(@modelo_3,[0,80],[0,0,0]);
-y(:,3)
+y
 %datos
 plot(T,y)
-title("Tarea no.1 modelo 3 Aguayo Johann")
+title("Modelo 3 b=0.5 Aguayo Johann")
 ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
-legend("Reactor 1","Reactor 2","Total")
+legend("Reactor Ca1","Reactor Ca2","Cai Total")
 end
 function dydT=modelo_3(T,y)
 %datos
@@ -21,7 +21,7 @@ v1 = 0.04; %m^3
 v2 = 0.02; %m^3
 k = 0.01; %1/s
 Cao = 0.5; %mol/m^3
-b = 0.4;
+b = 0.5;
 %Ecuacion de diseño CSTR
 dydT(1)=(((1-b)*F*Cao)/v1)-((F*Ca1)/v1)-(k*Ca1);
 dydT(2)=((b*F*Cao)/v2)-((F*Ca2)/v2)-(k*Ca2);
