@@ -5,8 +5,9 @@ clear
 clc
 [T,y]=ode45(@modelo_4,[0,80],[0,0]);
 y
+Cao = 0.5
 %datos
-plot(T,y)
+plot(T,y,Cao-y(:,1))
 title("Tarea no.1 modelo 3 Aguayo Johann")
 ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
