@@ -11,7 +11,6 @@ title("Tarea no.1 modelo 2 Aguayo Johann")
 ylabel("Ca [mol/m^3]"),xlabel("Tiempo [s]");
 grid
 legend("Ca1","Cb1","Ca2","Cb2")
-
 end
 function dydT=modelo_2(T,y)
 %datos

@@ -23,8 +23,11 @@ k = 0.01; %1/s
 Cao = 0.5; %mol/m^3
 b = 0.5;
 %Ecuacion de diseño CSTR
-dydT(1)=(((1-b)*F*Cao)/v1)-((F*Ca1)/v1)-(k*Ca1);
-dydT(2)=((b*F*Cao)/v2)-((F*Ca2)/v2)-(k*Ca2);
+dydT(1)=(((1-b)*F*Cao)/v1)-(((1-b)*F*Ca1)/v1)-(k*Ca1);
+
+dydT(2)=((b*F*Cao)/v2)-((b*F*Ca2)/v2)-(k*Ca2);
+
 dydT(3)= dydT(1) + dydT(2);
+
 dydT=dydT';
 end

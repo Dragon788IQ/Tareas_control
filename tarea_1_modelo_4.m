@@ -5,6 +5,7 @@ clear
 clc
 [T,y]=ode45(@modelo_4,[0,80],[0,0]);
 y
+Cao = 0.5
 %datos
 plot(T,y)
 title("Modelo 4 b=0.7 Aguayo Johann")
